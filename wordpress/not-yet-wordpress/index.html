@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Inge</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+
+	<link href='http://fonts.googleapis.com/css?family=Raleway:800,400,300' rel='stylesheet' type='text/css'>
+	<!--[if IE]>
+	  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+	
+	<div id="triangle">
+		<div id="logo">INGE</div>
+	</div>
+	<div id="hamburger"><img src="images/menu.png" width="30" height="30"/></div>
+	<div id="wrap">
+		<div id="singleface"><img src="images/singleface.jpg" width="400" height="300"/></div>
+		<div id="headwrap">
+			<div id="left_face_text">
+				<div id="left_eye_text" class="text_top_left"><img src="images/arrow_left.png" width="150" height="150"/></div>
+				<div id="left_ear_text" class="text_bottom_left"><img src="images/arrow_right.gif" width="150" height="150"/></div>
+			</div>
+			<div id="head">
+				<div id="left_ear"><img src="images/left_ear.jpeg" width="50" height="200" onmouseover="change_pic(this)" onmouseout="revert_pic(this)"/></div>
+				<div id="face">
+					<div id="forehead"></div>
+					<div id="eyes">
+						<div id="left_eye"><img src="images/left_eye.jpeg" width="250" height="50" onmouseover="change_pic(this)" onmouseout="revert_pic(this)"/></div>
+						<div id="right_eye"><img src="images/right_eye.jpeg" width="250" height="50" onmouseover="change_pic(this)" onmouseout="revert_pic(this)"/></div>
+					</div>
+
+					<!-- NOSE -->
+					<div id="nose"></div>
+					<!-- //NOSE -->
+
+					<!-- MOUTH -->
+					<div id="mouth"><img src="images/mouth.jpeg" width="500" height="100" onmouseover="change_pic(this)" onmouseout="revert_pic(this)"/></div>
+					<div id="mouth_text" class="text_mouth"><p>mouth</p></div>
+					<!-- //MOUTH -->
+				</div>
+				<div id="right_ear"><img src="images/right_ear.jpeg" width="50" height="200" onmouseover="change_pic(this)" onmouseout="revert_pic(this)"/></div>
+			</div>
+			<div id="right_face_text">
+				<div id="right_eye_text" class="text_top_right"><img src="images/arrow_right.gif" width="150" height="150"/></div>
+				<div id="right_ear_text" class="text_bottom_right"><img src="images/arrow_left.png" width="150" height="150"/></div>
+			</div>
+		</div>
+		<div id="instructions"><p>Hover to <br/>&nbsp;&nbsp;&nbsp;&nbsp;Discover<br/>&nbsp;&nbsp;</p></div>
+		
+		
+		<div id="footer">
+			<div id="social">
+				<p>Face</p> <p>Twit</p> <p>Insta</p> <p>Tumbl</p>
+			</div>
+			<div id="nav">
+				<p>Tour</p>
+				<p>Store</p>
+				<p>About</p>
+				<p>Contact</p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function change_pic(x){
+			show_text(x);
+
+			var imageSource = x.src,version2 = "2",
+				position = -5,
+				newSrc = [imageSource.slice(0, position), version2, imageSource.slice(position)].join('');
+			x.src = newSrc;
+		}
+
+		function revert_pic(x) {
+			hide_text(x);
+
+			var newSrc = x.src,
+				oldSrc = newSrc.replace("2", "");
+			x.src = oldSrc;
+		}
+
+		function show_text(x){
+			var thisId = x.parentElement.id,
+				textId = thisId + "_text";
+			document.getElementById(textId).classList.add("showtext");
+		}
+
+		function hide_text(x){
+			var thisId = x.parentElement.id,
+				textId = thisId + "_text";
+			document.getElementById(textId).classList.remove("showtext");
+		}
+
+	</script>
+</body>
+</html>
