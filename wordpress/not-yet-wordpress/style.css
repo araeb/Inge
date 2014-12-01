@@ -1,0 +1,256 @@
+html {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+}
+
+#wrap {
+	position: relative;
+	width: 100%;
+}
+
+#headwrap {
+	width: 900px;
+	margin: 0 auto;
+	padding-top: 75px;
+}
+
+#singleface {
+	display: none;
+}
+
+#triangle {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 200px 200px 0 0;
+	border-color: #ff3399 transparent transparent transparent;
+	line-height: 0px;
+	_border-color: #ff3399 #000000 #000000 #000000;
+	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+
+#logo {
+	padding: 10px;
+	background-color: #333333;
+	position: absolute;
+	top: -150px;
+	left: 30px;
+	color: #ffffff;
+}
+
+#instructions {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	float: right;
+	margin: 50px 50px 0px 0px;
+}
+
+#hamburger {
+	display: none;
+}
+
+#left_face_text {
+	width: 10px;
+	height: 10px;
+	float: left;
+	margin: 0px auto;
+	position: relative;
+}
+
+#right_face_text {
+	width: 10px;
+	height: 10px;
+	float: left;
+	margin: 0px auto;
+	padding: 0px;
+	position: relative;
+}
+
+#mouth_text {
+	width: 150px;
+	height: 50px;
+	margin:  100px auto 0px auto ; 
+	position: relative;
+}
+
+.text_top_right {
+	position: absolute;
+	top: -20px;
+	left: -160px;
+}
+
+.text_bottom_right {
+	position: absolute;
+	top: 200px;
+	left: -30px;
+}
+
+.text_top_left {
+	position: absolute;
+	top: -30px;
+	left: 150px;
+}
+
+.text_bottom_left {
+	position: absolute;
+	top: 200px;
+	left: 30px;
+}
+
+.text_mouth, .text_bottom_right, .text_top_right, .text_bottom_left, .text_top_left{
+	display: none; 
+}
+
+#head {
+	width: 600px;
+	margin: 0 auto;
+}
+
+#left_ear {
+	width: 50px;
+	height: 200px;
+	margin-top: 100px;
+	background-color: #666666;
+	float: left;
+}
+
+#right_ear {
+	width: 50px;
+	height: 200px;
+	margin-top: 100px;
+	background-color: #666666;
+	float: left;
+}
+
+#face {
+	width: 500px;
+	float: left;
+}
+
+#forehead {
+	width: 100%;
+	background-color: #FF0000;
+	height: 100px;
+}
+
+#eyes {
+	width: 100%;
+	height: 50px;
+}
+
+.showtext {
+	display: block ;
+}
+
+#left_eye {
+	width: 50%;
+	background-color: #FF6600;
+	height: 50px;
+	float: left;
+}
+
+#right_eye {
+	width: 50%;
+	background-color: #FFFF00;
+	height: 50px;
+	float: left;
+}
+
+#nose {
+	width: 100%;
+	background-color: #00A300;
+	height: 100px;
+}
+
+#mouth {
+	width: 100%;
+	background-color: #000099;
+	height: 100px;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	color: #000000;
+	width: 100%;
+	min-width: 700px;
+	padding: 5px;
+}
+
+#social {
+	float: left;
+
+}
+
+#social p {
+	margin: 0px;
+	padding-left: 20px;
+	display: inline;
+}
+
+#nav {
+	float: right;
+}
+
+#nav p {
+	display: inline;
+	padding-right: 20px;
+}
+
+@media all and (max-width: 900px){
+	#instructions {
+		width: 100px;
+		height: 100px;
+		margin: 0 auto;
+		position: absolute;
+		top: 200px;
+		left: 50px;
+	}
+
+	#headwrap {
+		margin: 0 auto;
+		display: block;
+		clear: right;
+	}
+}
+
+
+
+@media only screen and (max-width: 480px){
+
+
+	#hamburger {
+		display: block !important;
+		float: right;
+		margin: 50px 50px 0px 0px;
+	}
+
+	#instructions {
+		display: none !important;
+	}
+
+	#footer {
+		width: 400px !important; 
+	}
+
+	#singleface {
+		position: relative;
+		display: block !important;
+		margin: 0 auto !important;
+		width: 400px !important;
+	}
+
+	#headwrap {
+		display: none !important;
+	}
+
+}
