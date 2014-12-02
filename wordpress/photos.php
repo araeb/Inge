@@ -3,17 +3,28 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 		<title>Galleriffic | Thumbnail rollover effects and slideshow crossfades</title>
-		<link rel="stylesheet" href="http://localhost:8888/css/basic.css" type="text/css" />
-		<link rel="stylesheet" href="http://localhost:8888/css/galleriffic-2.css" type="text/css" />
-		<script type="text/javascript" src="http://localhost:8888/js/jquery-1.3.2.js"></script>
-		<script type="text/javascript" src="http://localhost:8888/js/jquery.galleriffic.js"></script>
-		<script type="text/javascript" src="http://localhost:8888/js/jquery.opacityrollover.js"></script>
+		
+			<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/basic.css" type="text/css" media="screen" />
+			<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/galleriffic-2.css" type="text/css" media="screen" />
+	
+			<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+			<script src="<?php bloginfo('template_directory'); ?>/js/jquery.galleriffic.js" type="text/javascript" ></script>
+			<script src="<?php bloginfo('template_directory'); ?>/js/jquery.opacityrollover.js" type="text/javascript" ></script>
+			
+		
 		<!-- We only want the thunbnails to display when javascript is disabled -->
 		<script type="text/javascript">
 			document.write('<style>.noscript { display: none; }</style>');
 		</script>
 	</head>
 	<body>
+	<!--
+		<php require "js/jquery.galleriffic.js" ;?>
+			<php require "js/jquery-1.3.2.js" ;?>
+				<php require "js/jquery.opacityrollover.js" ;?>
+					<php require "css/basic.css" ;?>
+						<php require "css/galleriffic-2.css" ;?>
+	-->
 		<div id="page">
 			<div id="container">
 				<h1><a href="index.html">Galleriffic</a></h1>
@@ -343,12 +354,15 @@
 			</div>
 		</div>
 		<div id="footer">&copy; 2009 Trent Foley</div>
+		
+		<script  href="<?php bloginfo('template_directory'); ?>/js/jquery.galleriffic.js" type="text/javascript" ></script>
+		<script  href="<?php bloginfo('template_directory'); ?>/js/jquery.opacityrollover.js" type="text/javascript" ></script>
+		<script href="<?php bloginfo('template_directory'); ?>/js/jquery-1.3.2" type="text/javascript"></script>
 		<script type="text/javascript">
-			jQuery(document).ready(function($) {
+			$(document).ready(function($) {
 				// We only want these styles applied when javascript is enabled
 				$('div.navigation').css({'width' : '300px', 'float' : 'left'});
 				$('div.content').css('display', 'block');
-
 				// Initially set opacity on thumbs and add
 				// additional styling for hover effect on thumbs
 				var onMouseOutOpacity = 0.67;
@@ -398,5 +412,6 @@
 				});
 			});
 		</script>
+
 	</body>
 </html>
